@@ -37,6 +37,7 @@
     "prettier:check": "prettier \"src/**/*.ts\" \"overlays/**/*.ts\" --config .prettierrc --check"
   },
   "dependencies": {
+    "gsap": "^3.13.0",
     "ograf": "^0.0.5",
     "tslib": "~2.8"
   }

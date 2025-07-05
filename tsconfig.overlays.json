@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "build/overlays",
     "rootDir": "overlays",
+    "lib": ["dom", "dom.iterable"],
     "noUnusedLocals": false,
     "noUnusedParameters": false
   },

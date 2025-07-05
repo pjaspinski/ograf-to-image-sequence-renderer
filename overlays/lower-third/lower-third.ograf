@@ -1,0 +1,53 @@
+{
+    "$schema": "https://ograf.ebu.io/v1/specification/json-schemas/graphics/schema.json",
+    "name": "Lower Third",
+    "description": "Example lower third",
+    "id": "lower-third",
+    "main": "build/index.js",
+    "version": "0",
+    "author": {
+        "name": "Paweł Jaśpiński"
+    },
+    "supportsRealTime": true,
+    "supportsNonRealTime": false,
+    "schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string",
+                "title": "Name",
+                "default": "Cormoran Strike"
+            },
+            "title": {
+                "type": "string",
+                "title": "Title",
+                "default": "Private detective"
+            },
+            "colors": {
+                "type": "object",
+                "properties": {
+                    "main": {
+                        "type": "string",
+                        "title": "Main",
+                        "default": "#ffffff"
+                    },
+                    "mainText": {
+                        "type": "string",
+                        "title": "Main text",
+                        "default": "#161A1D"
+                    },
+                    "accent": {
+                        "type": "string",
+                        "title": "Accent",
+                        "default": "#660708"
+                    },
+                    "accentText": {
+                        "type": "string",
+                        "title": "Accent text",
+                        "default": "#F5F3F4"
+                    }
+                }
+            }
+        }
+    }
+}
