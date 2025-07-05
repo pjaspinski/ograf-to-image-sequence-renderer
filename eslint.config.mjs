@@ -13,7 +13,7 @@ export default tseslint.config(
   {
     extends: [...tseslint.configs.recommended],
 
-    files: ['**/*.ts', '**/*.mts'],
+    files: ['src/**/*.ts'],
 
     plugins: {
       '@typescript-eslint': tseslint.plugin,
@@ -38,10 +38,38 @@ export default tseslint.config(
     },
   },
   {
-    files: ['__tests__/**'],
-    settings: {
-      vitest: {
-        typecheck: true,
+    extends: [...tseslint.configs.recommended],
+
+    files: ['overlays/**/*.ts'],
+
+    plugins: {
+      '@typescript-eslint': tseslint.plugin,
+    },
+
+    rules: {
+      '@typescript-eslint/explicit-function-return-type': 'warn',
+    },
+
+    languageOptions: {
+      parser: tseslint.parser,
+      ecmaVersion: 2020,
+      sourceType: 'module',
+
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
+
+      parserOptions: {
+        project: './tsconfig.overlays.json',
+      },
+    },
+  },
+  {
+    files: ['scripts/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
       },
     },
   },

@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build/overlays",
+    "rootDir": "overlays",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["overlays/**/*"],
+  "exclude": ["overlays/**/*.ograf", "overlays/**/build/**"]
+} 
